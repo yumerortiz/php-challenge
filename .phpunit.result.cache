@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\MobileTest::it_returns_null_when_name_empty":4,"Tests\\MobileTest\\MobileTest::it_returns_null_when_name_empty":4},"times":{"Tests\\MobileTest::it_returns_null_when_name_empty":0.003,"Tests\\MobileTest\\MobileTest::it_returns_null_when_name_empty":0.003}}

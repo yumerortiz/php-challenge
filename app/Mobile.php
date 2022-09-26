@@ -10,8 +10,8 @@ class Mobile
 {
 
 	protected $provider;
-	
-	function __construct(CarrierInterface $provider)
+
+	function __construct(CarrierInterface $provider = null)
 	{
 		$this->provider = $provider;
 	}
@@ -19,7 +19,7 @@ class Mobile
 
 	public function makeCallByName($name = '')
 	{
-		if( empty($name) ) return;
+		if( empty($name) ) return null;
 
 		$contact = ContactService::findByName($name);
 

@@ -7,7 +7,7 @@ use App\Contact;
 
 class ContactService
 {
-	
+
 	public static function findByName(): Contact
 	{
 		// queries to the db
