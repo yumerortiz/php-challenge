@@ -5,9 +5,10 @@ namespace App;
 
 class Call
 {
-	
-	function __construct()
+
+	public function doCall ($phone_number)
 	{
-		# code...
+		return $phone_number;
 	}
+
 }
