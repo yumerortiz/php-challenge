@@ -31,4 +31,18 @@ class MobileTest extends TestCase
 		$this->assertNull($phone);
 	}
 
+	function test_it_returns_null_when_the_number_of_sms_is_not_valid(){
+		$number = "01MinumeroNoValido45";
+		$mobile = new Mobile();
+		$resultSms = $mobile->makeSendSMS($number, 'El cuerpo del mensaje');
+		$this->assertNull($resultSms);
+	}
+
+	function test_it_returns_true_when_the_number_of_sms_is_valid(){
+		$number = "012224";
+		$mobile = new Mobile();
+		$resultSms = $mobile->makeSendSMS($number, 'El cuerpo del mensaje');
+		$this->assertEquals(true, $resultSms);
+	}
+
 }

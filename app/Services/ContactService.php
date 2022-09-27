@@ -22,6 +22,9 @@ class ContactService
 
 	public static function validateNumber(string $number): bool
 	{
-		// logic to validate numbers
+		if( is_numeric($number) ){
+			return true;
+		}
+		return false;
 	}
 }

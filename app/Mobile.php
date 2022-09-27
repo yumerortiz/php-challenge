@@ -27,4 +27,20 @@ class Mobile
 		return null;
 	}
 
+	public function makeSendSMS($number = '', $body = '')
+    {
+		if( empty($number) || empty($body) ){
+			return null;
+		}
+
+		$validateNumberPhone = ContactService::validateNumber($number);
+
+		if( $validateNumberPhone ){
+			$provider = new Provider;
+			$resultSms = $provider->makeSMS( $number, $body );
+			return $resultSms;
+		}
+		return null;
+	}
+
 }

@@ -5,6 +5,7 @@ use App\Interfaces\CarrierInterface;
 
 use App\Contact;
 use App\Call;
+use App\Sms;
 
 class Provider implements CarrierInterface{
 
@@ -18,6 +19,11 @@ class Provider implements CarrierInterface{
     public function makeCall($phone_number){
         $call = new Call;
         return $call->doCall($phone_number);
+    }
+
+    public function makeSMS($number, $body){
+        $sms = new Sms;
+        return $sms->sendSms($number, $body);
     }
 
 }
